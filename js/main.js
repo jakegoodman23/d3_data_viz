@@ -27,9 +27,9 @@ annotations = [
       title: "",
     },
     color: ["#cc0000"],
-    x: 550,
-    y: 10,
-    dy: 30,
+    x: 530,
+    y: 150,
+    dy: -30,
     dx: 50,
   },
 ];
@@ -57,15 +57,6 @@ const yLabel = g
   .attr("text-anchor", "middle")
   .attr("transform", "rotate(-90)")
   .text("Popularity (%)");
-
-const timeLabel = g
-  .append("text")
-  .attr("y", HEIGHT + 90)
-  .attr("x", WIDTH - 40)
-  .attr("font-size", "20px")
-  .attr("opacity", "0.7")
-  .attr("text-anchor", "middle")
-  .text("Year: 2004");
 
 const x = d3.scaleBand().range([0, WIDTH]).paddingInner(0.3).paddingOuter(0.2);
 
@@ -137,7 +128,7 @@ function changeButton(status) {
   buttonText = d3.select("#play-button").text();
   if (buttonText === "Play") {
     d3.select("#play-button").text("Pause");
-    interval = setInterval(step, 3000);
+    interval = setInterval(step, 1500);
   } else if (status === "reset") {
     time = 0;
     update(rawData, time);
@@ -182,9 +173,9 @@ function update(raw_data, year) {
           title: "",
         },
         color: ["#cc0000"],
-        x: 550,
-        y: 10,
-        dy: 30,
+        x: 530,
+        y: 150,
+        dy: -30,
         dx: 50,
       },
     ];
@@ -202,8 +193,8 @@ function update(raw_data, year) {
         },
         color: ["#cc0000"],
         x: 875,
-        y: 70,
-        dy: 30,
+        y: 210,
+        dy: -50,
         dx: 50,
       },
     ];
@@ -220,7 +211,7 @@ function update(raw_data, year) {
         },
         color: ["#cc0000"],
         x: 875,
-        y: 130,
+        y: 200,
         dy: -50,
         dx: 50,
       },
@@ -238,7 +229,7 @@ function update(raw_data, year) {
         },
         color: ["#cc0000"],
         x: 875,
-        y: 130,
+        y: 85,
         dy: 30,
         dx: 50,
       },
@@ -264,5 +255,5 @@ function update(raw_data, year) {
     .attr("y", (d) => y(d.value))
     .attr("x", (d) => x(d.variable));
 
-  timeLabel.text("Year: " + String(time + 2004));
+  d3.select("#year-text").text("Year: " + String(time + 2004));
 }

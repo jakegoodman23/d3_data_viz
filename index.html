@@ -6,32 +6,37 @@
     <title>Most Popular Programming Languages Data Viz</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
-    <nav class="navbar navbar-light bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="#"
+  <body>      
+    <div class="container">
+        <a class="title" 
           ><img id="logo" src="img/logo.png" />
-          <span
+          <span class = "title-text"
             ><strong
               >Programming Languages by Popularity since 2004</strong
-            ></span
-          ></a
-        >
+            ></span>
+    </a>
+
       </div>
-    </nav>
-    <div class="container">
+    <div class="container" id="top-graph-text">
+      <p><em>Use the buttons below to control the slide show with the below graph showing the popularity of the languages over the years </em> </p>
+    </div>
+    <div class="container" id="buttons">
       <div class="row">
-        <div>
-          <button type ="button" id="play-button" onclick="changeButton('play')" class="btn btn-primary">Play</button>
-          <button type ="button" id="reset-button" onclick="changeButton('reset')" class="btn btn-primary">Reset</button>
+        <div >
+          <button type ="button" id="play-button" onclick="changeButton('play')" class="button">Play</button>
+          <button type ="button" id="reset-button" onclick="changeButton('reset')" class="button">Reset</button>
         </div>
+    <div class="container" >
+      <p id="year-text">Year: 2004</p>
+    </div>
     <div class="container">
       <div class="row">
         <div id="main-bar-chart"></div>
       </div>
     </div>
     <hr class="divider">
-    <h3 style="text-align:center;">Trend view for specific programming language</h3>
+    <h3>Trend view for specific programming language</h3>
+    <p class="drop-down-info"> <em>Use the dropdown to the right to change the programming language shown below.</em></p>
     <div class="container" id ="lang-select-div">    
       <select id="lang-select" class="form-control">
         <option value="Abap">Abap</option>

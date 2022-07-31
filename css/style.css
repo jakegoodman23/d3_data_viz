@@ -1,16 +1,13 @@
-#logo {
-  height: 50px;
+body {
+  background-color: #fffff7;
 }
 
-#chart-area svg {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+h3 {
+  margin-left: 480px;
 }
 
-.navbar-brand {
-  height: 60px;
-  padding: 5px 0px;
+p.drop-down-info {
+  margin-left: 460px;
 }
 
 .page-title {
@@ -22,17 +19,49 @@
   margin-top: 15px;
 }
 
+.button {
+  border: none;
+  background-color: #e7e7e7;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: blue; /* Green */
+  color: white;
+}
+
 hr.divider {
   border-top: 16px solid #d3d3d3;
 }
 
+span.title-text {
+  font-size: 24px;
+}
+#logo {
+  height: 50px;
+}
+
+#chart-area svg {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
 #lang-select {
   float: right;
   margin-right: 550px;
+  margin-bottom: 10px;
   width: 150px;
   font-size: 16px;
 }
 
-h3 {
-  padding: 10px;
+#year-text {
+  margin-left: 600px;
+  font-size: 20px;
 }
